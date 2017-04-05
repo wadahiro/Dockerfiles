@@ -16,7 +16,10 @@ export AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
 
 
 # start lsyncd
-sed -i -e "s|@LSYNCD_TARGET@|$LSYNCD_TARGET|" /etc/lsyncd.conf
+sed -i -e "s|@LSYNCD_MAX_PROCESSES@|$LSYNCD_MAX_PROCESSES|" /etc/lsyncd.conf
+sed -i -e "s|@AWS_S3_BUCKET@|$AWS_S3_BUCKET|" /etc/lsyncd.conf
+sed -i -e "s|@AWS_S3_PREFIX@|$AWS_S3_PREFIX|" /etc/lsyncd.conf
+
 /bin/lsyncd /etc/lsyncd.conf
 
 # start supervisord
