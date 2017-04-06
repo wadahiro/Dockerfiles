@@ -29,7 +29,6 @@ RUN useradd -s /sbin/nologin $FTP_USER
 
 COPY supervisord.conf /etc/supervisord.conf
 
-COPY user_list /etc/vsftpd/
 COPY vsftpd.conf /etc/vsftpd/
 COPY lsyncd.conf /etc/lsyncd.conf
 COPY stdout.conf /etc/rsyslog.d/
