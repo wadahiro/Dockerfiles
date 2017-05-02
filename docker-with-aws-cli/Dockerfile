@@ -1,5 +1,6 @@
 FROM docker:latest
 RUN apk -v --update add \
+        zip \
         python \
         py-pip \
         groff \
