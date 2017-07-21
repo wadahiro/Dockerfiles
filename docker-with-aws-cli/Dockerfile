@@ -6,6 +6,8 @@ RUN apk -v --update add \
         groff \
         less \
         mailcap \
+        git \
+        bash \
         && \
     pip install --upgrade awscli s3cmd python-magic && \
     apk -v --purge del py-pip && \
@@ -14,5 +16,5 @@ VOLUME /root/.aws
 VOLUME /project
 WORKDIR /project
 ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["sh"]
+CMD ["bash"]
 
